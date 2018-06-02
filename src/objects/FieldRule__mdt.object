@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>A field rule specifies a condition for it to be fired and a condition for checking. If the checking fails, then an error is displayed when the record is saved.</description>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this rule is active.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Indicates if this rule is active.</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ConditionField__c</fullName>
+        <description>Name of the field the platform will use to check the rule.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Name of the field the platform will use to check the rule.</inlineHelpText>
+        <label>ConditionField</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ConditionOperator__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Condition operator</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EQUALS</fullName>
+                    <default>true</default>
+                    <label>Equals</label>
+                </value>
+                <value>
+                    <fullName>IS_NOT_EQUAL</fullName>
+                    <default>false</default>
+                    <label>Is not equal</label>
+                </value>
+                <value>
+                    <fullName>GREATER_THAN</fullName>
+                    <default>false</default>
+                    <label>Greater than</label>
+                </value>
+                <value>
+                    <fullName>GREATER_OR_EQUAL</fullName>
+                    <default>false</default>
+                    <label>Greater than or equal</label>
+                </value>
+                <value>
+                    <fullName>LESSER_THAN</fullName>
+                    <default>false</default>
+                    <label>Lesser than</label>
+                </value>
+                <value>
+                    <fullName>LESSER_OR_EQUAL</fullName>
+                    <default>false</default>
+                    <label>Lesser than or equal</label>
+                </value>
+                <value>
+                    <fullName>IS_EMPTY</fullName>
+                    <default>false</default>
+                    <label>Is blank</label>
+                </value>
+                <value>
+                    <fullName>IS_NOT_EMPTY</fullName>
+                    <default>false</default>
+                    <label>Is not blank</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ConditionValue__c</fullName>
+        <description>If using comparative conditions, specify the value here.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If using comparative conditions, specify the value here.</inlineHelpText>
+        <label>Condition value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ErrorMessage__c</fullName>
+        <description>Error message that will be displayed to the user if this record fails the validation.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Error message that will be displayed to the user if this record fails the validation.</inlineHelpText>
+        <label>Message</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object__c</fullName>
+        <description>The API name for the object in which the rule is run.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>The API name for the object in which the rule is run.</inlineHelpText>
+        <label>Object&apos;s API name</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecordType__c</fullName>
+        <description>The name of the specific record type to which you wish to apply this rule. Use the &quot;Name&quot;, not the &quot;DeveloperName&quot;.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>The name of the specific record type to which you wish to apply this rule. Use the &quot;Name&quot;, not the &quot;DeveloperName&quot;.</inlineHelpText>
+        <label>Record type name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RuleField__c</fullName>
+        <description>The field which will undergo the validation.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>The field which will undergo the validation.</inlineHelpText>
+        <label>Rule field</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RuleOperator__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Rule operator</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EQUALS</fullName>
+                    <default>true</default>
+                    <label>Equals</label>
+                </value>
+                <value>
+                    <fullName>IS_NOT_EQUAL</fullName>
+                    <default>false</default>
+                    <label>Is not equal</label>
+                </value>
+                <value>
+                    <fullName>GREATER_THAN</fullName>
+                    <default>false</default>
+                    <label>Greater than</label>
+                </value>
+                <value>
+                    <fullName>GREATER_OR_EQUAL</fullName>
+                    <default>false</default>
+                    <label>Greater than or equal</label>
+                </value>
+                <value>
+                    <fullName>LESSER_THAN</fullName>
+                    <default>false</default>
+                    <label>Lesser than</label>
+                </value>
+                <value>
+                    <fullName>LESSER_OR_EQUAL</fullName>
+                    <default>false</default>
+                    <label>Lesser than or equal</label>
+                </value>
+                <value>
+                    <fullName>IS_EMPTY</fullName>
+                    <default>false</default>
+                    <label>Is blank</label>
+                </value>
+                <value>
+                    <fullName>IS_NOT_EMPTY</fullName>
+                    <default>false</default>
+                    <label>Is not blank</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RuleValue__c</fullName>
+        <description>If using comparative conditions, specify the value here.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If using comparative conditions, specify the value here.</inlineHelpText>
+        <label>Rule value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Field rule</label>
+    <pluralLabel>Field rules</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>
