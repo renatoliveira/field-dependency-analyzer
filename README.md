@@ -4,7 +4,7 @@ This tool serves the purpose of relieving the administrator from the restrictive
 
 The idea is that this can replace simple validation rules, like when a field is changed or when a field depends on another one.
 
-# Motivation
+## Motivation
 
 I had a task in which I had to create some (many) validation rules for a single object. This wouldn't be a problem under normal circumstances, but the object had more than 10 record types, and each of them had 20+ rules in total. The limit of 100 validation rules would easily be reached.
 
@@ -18,13 +18,13 @@ For example, if you want to that a specific field to be mandatory when another f
 
 This is so small, so simple, that in our case it doesn't make sense to waste a precious resource (a validation rule "slot"). With this tool, this same rule could be written with our custom metadata, like this:
 
-![](images/rule_example_1.png)
+![Field rule example](images/rule_example_1.png)
 
 This rule can be read in a similar way as our validation rule: "when field Origin is not blank, field Reason should not be blank either".
 
 By using `addError` on a trigger context, we are able to deliver a friendly error message to our users:
 
-![](images/rule_example_2.png)
+![Field rule in action when saving a record](images/rule_example_2.png)
 
 And this without "spending" a validation rule.
 
@@ -38,8 +38,6 @@ Essentially, we are now "wasting" Apex run time with this. So please take this i
 
 ## Installation
 
-You can install this tool by using the following link:
-
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036qzR
+You can install this tool by using the following [link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036qzR).
 
 ...or by using the metadata API to upload the resources on the `src` folder to your org manually.
