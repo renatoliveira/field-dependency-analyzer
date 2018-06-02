@@ -35,3 +35,11 @@ This tool is pretty limited for now. It is missing the logic for the operators t
 Also, we can brag of not "wasting" validation rules, but we can not add the error message to the specific field, just on the top of the record page. And most importantly: we are leaving the validation to the part where Apex is executed. For comparison effect, the standard validation rules are executed before the record is handled by Apex.
 
 Essentially, we are now "wasting" Apex run time with this. So please take this into consideration when handling many rules and many records at once. If you are already close to the run time limit, consider optimizing your triggers first, since this tool can take some more of your run time (depending, of course, of how many rules you are using).
+
+## Installation
+
+You can install this tool by using the following link:
+
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1I0000036qzR
+
+...or by using the metadata API to upload the resources on the `src` folder to your org manually.
